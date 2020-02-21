@@ -40,26 +40,13 @@ function updateCoffeesByInput(e) {
     // var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
 
-    coffees.forEach(function(coffee) {
-       if (coffee.name.toLowerCase() === userInput) {
-           filteredCoffees.push(coffee);
-       }
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase().includes(userInput)) {
+            filteredCoffees.push(coffee);
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
-// }
-// if (userInput) {
-//     coffees.forEach(function(coffee, i) {
-//     var coffeeArray = Array.from(coffee.name);
-//
-//     if (coffeeArray[i] === userInput) {
-//         filteredCoffees.push(coffee);
-//     }
-// });
-
-// }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
