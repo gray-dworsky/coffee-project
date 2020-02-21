@@ -1,7 +1,6 @@
 "use strict";
 
 
-//This creates a table of coffee name and roast
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
@@ -12,7 +11,6 @@ function renderCoffee(coffee) {
     return html;
 }
 
-//This
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i < coffees.length; i++) {
@@ -21,19 +19,46 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+function updateCoffeesByRoast(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+
     coffees.forEach(function (coffee) {
-            if (selectedRoast === 'all') {
-                filteredCoffees.push(coffee);
-            } else if (coffee.roast === selectedRoast) {
-                filteredCoffees.push(coffee);
-            }
-        });
+        if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee);
+        } else if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+    });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function updateCoffeesByInput(e) {
+    e.preventDefault();
+    var userInput = searchCoffee.value.toLowerCase();
+    // var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+
+    coffees.forEach(function(coffee) {
+       if (coffee.name.toLowerCase() === userInput) {
+           filteredCoffees.push(coffee);
+       }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// }
+// if (userInput) {
+//     coffees.forEach(function(coffee, i) {
+//     var coffeeArray = Array.from(coffee.name);
+//
+//     if (coffeeArray[i] === userInput) {
+//         filteredCoffees.push(coffee);
+//     }
+// });
+
+// }
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -55,12 +80,12 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchCoffee = document.querySelector('#searchCoffee');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-roastSelection.addEventListener('change', updateCoffees);
+roastSelection.addEventListener('change', updateCoffeesByRoast);
+searchCoffee.addEventListener('keyup', updateCoffeesByInput);
 
 
