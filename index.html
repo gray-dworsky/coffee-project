@@ -11,14 +11,13 @@
 <form>
     <label for="roast-selection"></label>
     <select id="roast-selection">
+        <option id="allCoffee">all</option>
         <option>light</option>
         <option>medium</option>
         <option>dark</option>
-        <option>all</option>
+
     </select>
-    <input id="submit" type="submit"/>
-    <br>
-    <input id="searchCoffee" type="text" placeholder="Search Coffee">
+    <input id="searchCoffee" type="text" onkeydown="updateCoffees(e)" placeholder="Search Coffee">
 </form>
 
 
