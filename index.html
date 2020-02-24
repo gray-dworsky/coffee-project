@@ -16,27 +16,50 @@
 
 </head>
 <body>
-<div class="container">
-    <h1 class="center-align">Kopi Koffee</h1>
+<h1 class="center-align">Kopi Koffee</h1>
 
 <div class="carousel carousel-slider">
+    <div class="carousel-fixed-item center waves-effect">
+        <form>
+
+            <div class="row">
+                <div class="col s8">
+                    <label for="roast-selection"></label>
+                    <div class="input-field col s12">
+                        <select id="roast-selection">
+                            <option id="allCoffee">All</option>
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s8">
+                    <input id="searchCoffee" type="text" placeholder="Search Coffee">
+                </div>
+            </div>
+        </form>
+    </div>
     <a class="carousel-item" href="#"><img src="img/coffee-carousel.jpg" alt="coffee1"></a>
     <a class="carousel-item" href="#"><img src="img/coffee-carousel-2.jpg" alt="coffee1"></a>
     <a class="carousel-item" href="#"><img src="img/coffee-carousel-3.jpg" alt="coffee1"></a>
 </div>
 
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option id="allCoffee">all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
+<!--<form>-->
+<!--    <label for="roast-selection"></label>-->
+<!--    <select id="roast-selection">-->
+<!--        <option id="allCoffee">all</option>-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
 
-    </select>
-    <input id="searchCoffee" type="text" placeholder="Search Coffee">
-</form>
+<!--    </select>-->
+<!--    <input id="searchCoffee" type="text" placeholder="Search Coffee">-->
+<!--</form>-->
 
 <!--<form>-->
 <!--    <input type ="text" id="addCoffee" placeholder="Add A Flavor">-->
@@ -50,7 +73,8 @@
 <script src="js/custom.js"></script>
 <!--Materialize JS-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<!--Jquery JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-</div>
 </body>
 </html>

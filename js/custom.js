@@ -95,15 +95,53 @@ roastSelection.addEventListener('change', updateCoffeesByRoast);
 searchCoffee.addEventListener('keyup', updateCoffeesByInput);
 // addCoffee.addEventListener('click', addToCoffees);
 
+
 var options = {
-    duration: 2000,
+    duration: 1000,
     dist: 0,
     numVisible: 1,
-    fullWidth: true
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.carousel');
+    console.log(elems);
+    var instances = M.Carousel.init(elems, options);
+
+    var instance = M.Carousel.getInstance(elems[0]);
+    setInterval(function () {
+        instance.next(1);
+    }, 7000);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
 });
+
+
+
+
+// $(document).ready(function(){
+//     $('input.autocomplete').autocomplete({
+//         data: {
+//             'Light City': null,
+//             'Half City': null,
+//             'Cinnamon': null,
+//             'City': null,
+//             'American': null,
+//             'Breakfast': null,
+//             'High': null,
+//             'Continental': null,
+//             'New Orleans': null,
+//             'European': null,
+//             'Espresso': null,
+//             'Viennese': null,
+//             'Italian': null,
+//             'French': null,
+//             'Light Roast': null,
+//             'Medium Roast': null,
+//             'Dark Roast': null
+//         }
+//     });
+//     $('select').formSelect();
+// });
