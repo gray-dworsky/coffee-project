@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee Project</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!--Custom CSs-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Materialize CSS-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
 </head>
 <body>
-<h1>Coffee!</h1>
+<div class="container">
+    <h1 class="center-align">Kopi Koffee</h1>
+
+<div class="carousel carousel-slider">
+    <a class="carousel-item" href="#"><img src="img/coffee-carousel.jpg" alt="coffee1"></a>
+    <a class="carousel-item" href="#"><img src="img/coffee-carousel-2.jpg" alt="coffee1"></a>
+    <a class="carousel-item" href="#"><img src="img/coffee-carousel-3.jpg" alt="coffee1"></a>
+</div>
+
 
 <form>
     <label for="roast-selection"></label>
@@ -20,11 +38,19 @@
     <input id="searchCoffee" type="text" placeholder="Search Coffee">
 </form>
 
+<!--<form>-->
+<!--    <input type ="text" id="addCoffee" placeholder="Add A Flavor">-->
+<!--</form>-->
 
 <!--Coffee Render-->
 <div id="coffees"></div>
 
 
-<script src="main.js"></script>
+<!--Custom JS-->
+<script src="js/custom.js"></script>
+<!--Materialize JS-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</div>
 </body>
 </html>
