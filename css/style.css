@@ -1,13 +1,33 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.title {
+    font-size: 6.5em;
+    margin-top: 70px;
+    margin-left: 35px;
+    border-bottom: 2px solid white;
+
+}
+.title-2nd {
+    font-size: .4em;
+    padding-left: 10px;
+    border-bottom: 1px solid white;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.flavors {
+    font-size: 3em;
+    /*font-family: ;*/
+    color: #fff;
+    background-color: #d6d1c3;
+    margin-top: 20px;
+    height: 75px;
 }
-
-#searchCoffee {
-    background-color: #fff;
+.bg-image {
+    background-image: url("../img/coffee-carousel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 300px;
+    padding-left: 25px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.search-boxes {
 }
